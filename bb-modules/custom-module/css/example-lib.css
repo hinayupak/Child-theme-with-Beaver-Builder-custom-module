@@ -1,0 +1,202 @@
+/**
+ * This is an example of an additional stylesheet that can be 
+ * enqueued using the add_css module method. The files settings.css,
+ * frontend.css and frontend.responsive.css don't need to be 
+ * enqueued and will be included for you automatically.
+ */
+ .custom-module {
+    background-color: #DFDFDF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 25px;
+
+    * {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .col-left {
+        width: 100%;
+    }
+
+    .col-right {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+
+    .custom-module-title {
+        color: #1E1E1E;
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+    .custom-module-text {
+        color: #474747;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .custom-module-btn-container {
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .custom-module-primary {
+            background-color: #242424;
+        }
+
+        .custom-module-secondary {
+            background-color: #F86E01;
+        }
+    }
+
+    .custom-module-img {
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tooltip-container {
+        position: absolute;
+        right: -5%;
+        top: 50%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .tooltip {
+            background-color: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+            padding: 5px;
+            box-shadow: 0 5px 10px #00000024;
+
+            &:hover {
+                .tooltip-left {
+                    background-color: #F86E01;
+                }
+            }
+
+            .tooltip-left {
+                background-color: #1E1E1E;
+                font-size: 18px;
+                color: #fff;
+                padding: 8px 10px;
+                border-radius: 12px;
+                font-family: auto;
+            }
+
+            .tooltip-right {
+                color: #1E1E1E;
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .custom-module {
+        .custom-module-btn-container {
+            font-size: 20px;
+    
+            a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+        }
+
+        .tooltip-container {
+            top: 40%;
+            gap: 10px;
+
+            .tooltip {
+                padding: 8px;
+
+                .tooltip-left {
+                    font-size: 26px;
+                }
+
+                .tooltip-right {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .custom-module {
+        flex-direction: row;
+        gap: 30px;
+        padding: 7%;
+
+        .col-left {
+            width: 54%;
+        }
+
+        .col-right {
+            width: 46%;
+        }
+
+        .custom-module-title {
+            font-size: 54px;
+        }
+
+        .custom-module-text {
+            font-size: 24px;
+            margin-bottom: 6%;
+        }
+
+        .custom-module-btn-container {
+            font-size: 28px;
+
+            a {
+                padding: 20px 30px;
+            }
+        }
+
+        .tooltip-container {
+            right: -10%;
+            top: 40%;
+            gap: 15px;
+
+            .tooltip {
+                gap: 15px;
+                padding: 10px;
+
+                .tooltip-left {
+                    font-size: 36px;
+                }
+
+                .tooltip-right {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
